@@ -65,3 +65,11 @@ Exoneraciones:
 Clinicas:
     resource: "@AppBundle/Resources/config/routing/clinicas.yml"
     prefix:     /clinicas
+
+Laborales:
+    resource: "@AppBundle/Resources/config/routing/laborales.yml"
+    prefix:     /laborales
+
+Civiles:
+    resource: "@AppBundle/Resources/config/routing/civiles.yml"
+    prefix:     /civiles

@@ -61,3 +61,19 @@ app_exoneraciones:
 app_clinicas:
         resource: "@AppBundle/Resources/config/routing/clinicas.yml"
         prefix:   /clinicas
+
+app_laborales:
+       resource: "@AppBundle/Resources/config/routing/laborales.yml"
+       prefix:   /laborales
+
+app_civiles:
+        resource: "@AppBundle/Resources/config/routing/civiles.yml"
+        prefix:   /civiles
+
+app_civiles:
+        resource: "@AppBundle/Resources/config/routing/civiles.yml"
+        prefix:   /civiles
+
+homepage:
+  path: /blog
+  defaults: {_controller : AppBundle:Default:index }

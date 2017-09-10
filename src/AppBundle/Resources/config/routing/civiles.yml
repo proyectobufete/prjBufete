@@ -1,0 +1,24 @@
+civiles_index:
+    path:     /
+    defaults: { _controller: "AppBundle:Civiles:index" }
+    methods:  GET
+
+civiles_show:
+    path:     /{idCivil}/show
+    defaults: { _controller: "AppBundle:Civiles:show" }
+    methods:  GET
+
+civiles_new:
+    path:     /new
+    defaults: { _controller: "AppBundle:Civiles:new" }
+    methods:  [GET, POST]
+
+civiles_edit:
+    path:     /{idCivil}/edit
+    defaults: { _controller: "AppBundle:Civiles:edit" }
+    methods:  [GET, POST]
+
+civiles_delete:
+    path:     /{idCivil}/delete
+    defaults: { _controller: "AppBundle:Civiles:delete" }
+    methods:  DELETE
