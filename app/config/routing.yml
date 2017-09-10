@@ -1,3 +1,67 @@
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
+
+Paises:
+    resource: "@AppBundle/Resources/config/routing/paises.yml"
+    prefix:     /paises
+
+Departamentos:
+    resource: "@AppBundle/Resources/config/routing/departamentos.yml"
+    prefix:     /departamentos
+
+Ciudad:
+    resource: "@AppBundle/Resources/config/routing/ciudad.yml"
+    prefix:     /ciudad
+
+EstadoCivil:
+    resource: "@AppBundle/Resources/config/routing/estadosciviles.yml"
+    prefix:     /estadosciviles
+
+Trabajos:
+    resource: "@AppBundle/Resources/config/routing/trabajos.yml"
+    prefix:     /trabajos
+
+Bufetes:
+    resource: "@AppBundle/Resources/config/routing/bufetes.yml"
+    prefix:     /bufetes
+
+Demandantes:
+    resource: "@AppBundle/Resources/config/routing/demandantes.yml"
+    prefix:     /demandantes
+
+Demandados:
+    resource: "@AppBundle/Resources/config/routing/demandados.yml"
+    prefix:     /demandados
+
+Tribunales:
+    resource: "@AppBundle/Resources/config/routing/tribunales.yml"
+    prefix:     /tribunales
+
+Tipocaso:
+    resource: "@AppBundle/Resources/config/routing/tipocaso.yml"
+    prefix:     /tipocaso
+
+Personas:
+    resource: "@AppBundle/Resources/config/routing/personas.yml"
+    prefix:     /personas
+
+Estudiantes:
+    resource: "@AppBundle/Resources/config/routing/estudiantes.yml"
+    prefix:     /estudiantes
+
+Casos:
+    resource: "@AppBundle/Resources/config/routing/casos.yml"
+    prefix:     /casos
+
+practicas:
+    resource: "@AppBundle/Resources/config/routing/practicas.yml"
+    prefix:     /practicas
+
+Exoneraciones:
+    resource: "@AppBundle/Resources/config/routing/exoneraciones.yml"
+    prefix:     /exoneraciones
+
+Clinicas:
+    resource: "@AppBundle/Resources/config/routing/clinicas.yml"
+    prefix:     /clinicas

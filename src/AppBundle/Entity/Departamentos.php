@@ -71,6 +71,12 @@ class Departamentos
         return $this;
     }
 
+
+    public function __toString()
+  {
+    return $this->departamento;
+  }
+
     /**
      * Get idPais
      *
@@ -81,4 +87,3 @@ class Departamentos
         return $this->idPais;
     }
 }
-

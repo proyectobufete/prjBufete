@@ -57,6 +57,14 @@ class Tipocaso
         return $this->tipo;
     }
 
+
+
+    public function __toString()
+      {
+        return $this->tipo;
+      }
+          
+
     /**
      * Set estadoTipo
      *
@@ -81,4 +89,3 @@ class Tipocaso
         return $this->estadoTipo;
     }
 }
-

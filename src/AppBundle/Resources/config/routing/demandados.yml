@@ -1,0 +1,24 @@
+demandados_index:
+    path:     /
+    defaults: { _controller: "AppBundle:Demandados:index" }
+    methods:  GET
+
+demandados_show:
+    path:     /{idDemandado}/show
+    defaults: { _controller: "AppBundle:Demandados:show" }
+    methods:  GET
+
+demandados_new:
+    path:     /new
+    defaults: { _controller: "AppBundle:Demandados:new" }
+    methods:  [GET, POST]
+
+demandados_edit:
+    path:     /{idDemandado}/edit
+    defaults: { _controller: "AppBundle:Demandados:edit" }
+    methods:  [GET, POST]
+
+demandados_delete:
+    path:     /{idDemandado}/delete
+    defaults: { _controller: "AppBundle:Demandados:delete" }
+    methods:  DELETE

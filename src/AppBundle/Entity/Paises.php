@@ -71,6 +71,10 @@ class Paises
         return $this;
     }
 
+    public function __toString(){
+      return $this->pais;
+    }
+
     /**
      * Get estadoPais
      *
@@ -81,4 +85,3 @@ class Paises
         return $this->estadoPais;
     }
 }
-

@@ -202,6 +202,12 @@ class Bufetes
         return $this->estadoBufete;
     }
 
+
+    public function __toString()
+  {
+    return $this->nombreBufete;
+  }
+
     /**
      * Set idCiudad
      *
@@ -226,4 +232,3 @@ class Bufetes
         return $this->idCiudad;
     }
 }
-

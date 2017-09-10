@@ -115,6 +115,13 @@ class Estudiantes
         return $this->estadoEstudiante;
     }
 
+
+
+    public function __toString()
+  {
+    return $this->carneEstudiante;
+  }
+
     /**
      * Set idPersona
      *
@@ -139,4 +146,3 @@ class Estudiantes
         return $this->idPersona;
     }
 }
-
