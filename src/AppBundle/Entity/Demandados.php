@@ -115,6 +115,12 @@ class Demandados
         return $this->dirnotificacionDemandado;
     }
 
+
+      public function __toString()
+        {
+          return $this->nombreDemandado;
+        }
+
     /**
      * Set telefonoDemandado
      *
@@ -139,4 +145,3 @@ class Demandados
         return $this->telefonoDemandado;
     }
 }
-

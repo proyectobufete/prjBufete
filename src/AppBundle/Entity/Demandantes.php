@@ -289,6 +289,12 @@ class Demandantes
         return $this->idTrabajo;
     }
 
+
+    public function __toString()
+  {
+    return $this->nombreDemandante;
+  }
+
     /**
      * Set idCiudad
      *
@@ -313,4 +319,3 @@ class Demandantes
         return $this->idCiudad;
     }
 }
-

@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Demandados list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Iddemandado</th>
+                <th>Nombredemandado</th>
+                <th>Direcciondemandado</th>
+                <th>Dirnotificaciondemandado</th>
+                <th>Telefonodemandado</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for demandado in demandados %}
+            <tr>
+                <td><a href="{{ path('demandados_show', { 'idDemandado': demandado.idDemandado }) }}">{{ demandado.idDemandado }}</a></td>
+                <td>{{ demandado.nombreDemandado }}</td>
+                <td>{{ demandado.direccionDemandado }}</td>
+                <td>{{ demandado.dirnotificacionDemandado }}</td>
+                <td>{{ demandado.telefonoDemandado }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('demandados_show', { 'idDemandado': demandado.idDemandado }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('demandados_edit', { 'idDemandado': demandado.idDemandado }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('demandados_new') }}">Create a new demandado</a>
+        </li>
+    </ul>
+{% endblock %}

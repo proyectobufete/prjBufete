@@ -1,0 +1,24 @@
+tribunales_index:
+    path:     /
+    defaults: { _controller: "AppBundle:Tribunales:index" }
+    methods:  GET
+
+tribunales_show:
+    path:     /{idTribunal}/show
+    defaults: { _controller: "AppBundle:Tribunales:show" }
+    methods:  GET
+
+tribunales_new:
+    path:     /new
+    defaults: { _controller: "AppBundle:Tribunales:new" }
+    methods:  [GET, POST]
+
+tribunales_edit:
+    path:     /{idTribunal}/edit
+    defaults: { _controller: "AppBundle:Tribunales:edit" }
+    methods:  [GET, POST]
+
+tribunales_delete:
+    path:     /{idTribunal}/delete
+    defaults: { _controller: "AppBundle:Tribunales:delete" }
+    methods:  DELETE

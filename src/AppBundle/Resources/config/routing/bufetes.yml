@@ -1,0 +1,24 @@
+bufetes_index:
+    path:     /
+    defaults: { _controller: "AppBundle:Bufetes:index" }
+    methods:  GET
+
+bufetes_show:
+    path:     /{idBufete}/show
+    defaults: { _controller: "AppBundle:Bufetes:show" }
+    methods:  GET
+
+bufetes_new:
+    path:     /new
+    defaults: { _controller: "AppBundle:Bufetes:new" }
+    methods:  [GET, POST]
+
+bufetes_edit:
+    path:     /{idBufete}/edit
+    defaults: { _controller: "AppBundle:Bufetes:edit" }
+    methods:  [GET, POST]
+
+bufetes_delete:
+    path:     /{idBufete}/delete
+    defaults: { _controller: "AppBundle:Bufetes:delete" }
+    methods:  DELETE
