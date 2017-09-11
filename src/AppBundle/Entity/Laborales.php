@@ -7,6 +7,7 @@ namespace AppBundle\Entity;
  */
 class Laborales
 {
+
     /**
      * @var integer
      */
@@ -486,5 +487,5 @@ class Laborales
     {
         return $this->idTrabajo;
     }
-}
 
+}

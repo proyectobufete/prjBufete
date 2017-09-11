@@ -3,6 +3,8 @@
 namespace AppBundle\Controller;
 
 use AppBundle\Entity\Casos;
+use AppBundle\Entity\Laborales;
+use AppBundle\Entity\Civiles;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -28,12 +30,15 @@ class CasosController extends Controller
     }
 
     /**
-     * Creates a new caso entity.
+     * Crear nuevo caso laboral
      *
      */
-    public function newAction(Request $request)
+    public function newLaboralAction(Request $request)
     {
         $caso = new Casos();
+        $laboral = new Laborales();
+        $caso->setLaborales($laboral);
+
         $form = $this->createForm('AppBundle\Form\CasosType', $caso);
         $form->handleRequest($request);
 
@@ -45,7 +50,33 @@ class CasosController extends Controller
             return $this->redirectToRoute('casos_show', array('idCaso' => $caso->getIdcaso()));
         }
 
-        return $this->render('casos/new.html.twig', array(
+        return $this->render('casos/newlaboral.html.twig', array(
+            'caso' => $caso,
+            'form' => $form->createView(),
+        ));
+    }
+
+    /**
+    * Crear casos civiles
+    */
+    public function newCivilAction(Request $request)
+    {
+        $caso = new Casos();
+        $civil = new Civiles();
+        $caso->setCiviles($civil);
+
+        $form = $this->createForm('AppBundle\Form\CasocivilType', $caso);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($caso);
+            $em->flush();
+
+            return $this->redirectToRoute('casos_show', array('idCaso' => $caso->getIdcaso()));
+        }
+
+        return $this->render('casos/newcivil.html.twig', array(
             'caso' => $caso,
             'form' => $form->createView(),
         ));

@@ -6,7 +6,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class CasosType extends AbstractType
+class CasocivilType extends AbstractType
 {
     /**
      * {@inheritdoc}
@@ -26,8 +26,8 @@ class CasosType extends AbstractType
         ->add('idTribunal')
         ->add('idPersona')
         ->add('idTipo')
-        ->add('laborales', 'AppBundle\Form\LaboralesType', array(
-            'label' => 'Laborales',
+        ->add('civiles', 'AppBundle\Form\CivilesType', array(
+            'label' => 'Civiles',
         ))
         ;
     }

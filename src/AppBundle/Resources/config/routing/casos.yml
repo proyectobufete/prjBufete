@@ -8,9 +8,14 @@ casos_show:
     defaults: { _controller: "AppBundle:Casos:show" }
     methods:  GET
 
-casos_new:
-    path:     /new
-    defaults: { _controller: "AppBundle:Casos:new" }
+casos_newlaboral:
+    path:     /newlaboral
+    defaults: { _controller: "AppBundle:Casos:newLaboral" }
+    methods:  [GET, POST]
+
+casos_newcivil:
+    path:     /newcivil
+    defaults: { _controller: "AppBundle:Casos:newCivil" }
     methods:  [GET, POST]
 
 casos_edit:
