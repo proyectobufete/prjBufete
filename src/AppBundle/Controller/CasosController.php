@@ -56,6 +56,7 @@ class CasosController extends Controller
         ));
     }
 
+
     /**
     * Crear casos civiles
     */
