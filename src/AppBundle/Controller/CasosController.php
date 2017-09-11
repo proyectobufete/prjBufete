@@ -39,11 +39,18 @@ class CasosController extends Controller
         $laboral = new Laborales();
         $caso->setLaborales($laboral);
 
-        $form = $this->createForm('AppBundle\Form\CasosType', $caso);
+        $idciudad = 1;
+
+        $form = $this->createForm('AppBundle\Form\CasosType', $caso, array('idciudad'=> $idciudad));
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
+
+            $tipocaso_repo = $em->getRepository("AppBundle:Tipocaso");
+            $tipo = $tipocaso_repo->find(2);
+            $caso->setIdTipo($tipo);
+
             $em->persist($caso);
             $em->flush();
 
@@ -66,11 +73,18 @@ class CasosController extends Controller
         $civil = new Civiles();
         $caso->setCiviles($civil);
 
-        $form = $this->createForm('AppBundle\Form\CasocivilType', $caso);
+        $idciudad = 1;
+
+        $form = $this->createForm('AppBundle\Form\CasocivilType', $caso, array('idciudad'=> $idciudad));
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
+
+            $tipocaso_repo = $em->getRepository("AppBundle:Tipocaso");
+            $tipo = $tipocaso_repo->find(1);
+            $caso->setIdTipo($tipo);
+
             $em->persist($caso);
             $em->flush();
 
